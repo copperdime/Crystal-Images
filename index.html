@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Crystals Game</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+</head>
+
+<body>
+<div class="container">
+	<!-- Contains Nav Bar -->
+		<header class = "navbar">
+			<nav class="navbar navbar-default">
+			  <div class="container-fluid">
+			    <div class="navbar-header">
+			      <a class="navbar-brand" href="index.html">
+			      <p><div id = "GameName">Crystals Game</div></p>
+			      </a>
+			    </div>
+			  </div>
+			</nav>
+		</header>
+
+	<!-- Start Rows and Column for buttons -->
+	
+		<div class="row">
+		<!-- First Column in row1 -->
+			<div class="col-md-4" id="theCrystal">
+				<img alt="Crystals Game" src="assets/images/purpleCrystal.jpg" width=200 height=133>
+				<div class="instructions"> 
+				<p> You will be given a random number at the start of the game.</p>
+
+				<p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score. You will win the game by matching your total score to a random number; you will lose the game if your total score goes above the random number. </p>
+
+				<p>The value of each crystal is hidden from you until you click on it. Each time the game starts, the game will change the value of each crystal.</p>
+				</div>
+
+			</div>
+		<!-- Second Column in row1 -->
+			<div class="text guess col-md-4">Number to Guess <p>
+				<div id="theNumber">39</div>
+			</div>
+		<!-- Third Column in row1 -->
+			<div class="grayNot1 col-md-4">
+				<div class = "text">Your Score: </div>
+					<p> Add some JQuery source here that calculates the score!</p>
+				<div class= "text"> Wins: </div>
+					<p> Add some JQuery source that loops the wins!</p>
+				<div class= "text">Losses: </div>
+					<p> Add some JQuery source that loops the losses! </p>
+			</div>
+		</div>
+
+		<!-- Blank second Row2 for spacing -- >
+		<div class="row">
+				<div class="black col-m-12">Hello</div>
+		</div>
+
+		<!-- Third Row -->
+		<div class="row">
+		<!-- First Column in row3 -->
+			<div class="crystalColor col-md-3" id="firstImage">
+				<img src="assets/images/multicolorCrystal.jpg" width=240 height=240 alt="This is one of the unique crystals. Need 
+				to assign JQuery code to that assigns the crystal a number value. An on-click event">
+			</div>
+
+		<!-- Second Column in row3 -->
+			<div class="crystalColor col-md-3" id="secondImage">
+				<img src="assets/images/pinkCrystal.jpg" width=240 height=240 alt="This is one of the unique crystals. Need 
+				to assign JQuery code to that assigns the crystal a number value. An on-click event">
+			</div>
+
+		<!-- Third Column in row3 -->
+			<div class="crystalColor col-md-3" id="thirdImage">
+				<img src="assets/images/diamondCrystal.jpg" width=240 height=240 alt="This is one of the unique crystals. Need 
+				to assign JQuery code to that assigns the crystal a number value. An on-click event">
+			</div>
+
+			<!-- Fourth Column in row3 -->
+			<div class="crystalColor col-md-3" id="fourthImage">
+				<img src="assets/images/bleedingCrystal.png" width=240 height=240 alt="This is one of the unique crystals. Need 
+				to assign JQuery code to that assigns the crystal a number value. An on-click event">
+			</div>
+		</div>
+	<!--Begin Footer -->
+	<nav class="navbar navbar-default navbar-fixed-bottom">
+  		<div class="container">
+   			<p class="navbar-text navbar-right">Copyright, <a href="index.html" class="navbar-link">Adrianne Kelly 2017 </a></p>
+  		</div>
+	</nav>
+	</div>
+
+	
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>

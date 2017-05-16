@@ -1,0 +1,54 @@
+.navbar navbar-default{
+	background: black;
+}
+#GameName{
+	color: black;
+}
+body{
+	background: black;
+}
+.container{
+	background: #345454;
+}
+#theCrystal{
+	padding: 10px;
+}
+.guess{
+	margin-top: 20px;
+	margin-right: 10px;
+	padding: 10px;
+	text-align: center;
+	background: #ffffff;
+}
+
+.grayNot{
+	background: #c13;
+}
+
+.grayNot1{
+	background: #664492;
+}
+.crystalColor{
+	background: black;
+}
+
+.black{
+	background: black;
+}
+.instructions{
+	font-size: 15px;
+	color: black;
+	font-weight: bold;
+}
+.text{
+	font-size: 20px;
+	color: black;
+	font-weight: bold;
+}
+
+#theNumber{
+	align-content;
+	font-size: 100px;
+	color: blue;
+	font-weight: bolder;
+}
