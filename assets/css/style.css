@@ -1,11 +1,13 @@
-.navbar navbar-default{
-	background: black;
+.navbar{
+	margin-bottom: 0px;
 }
+
 #GameName{
 	color: black;
 }
-body{
-	background: black;
+
+#headTitle{
+	font-size: 20px;
 }
 .container{
 	background: #345454;
@@ -14,7 +16,7 @@ body{
 	padding: 10px;
 }
 .guess{
-	margin-top: 20px;
+	margin-top: 10px;
 	margin-right: 10px;
 	padding: 10px;
 	text-align: center;
@@ -25,7 +27,7 @@ body{
 	background: #c13;
 }
 
-.grayNot1{
+.purple{
 	background: #664492;
 }
 .crystalColor{
@@ -46,9 +48,12 @@ body{
 	font-weight: bold;
 }
 
-#theNumber{
+#numberToGuess{
 	align-content;
 	font-size: 100px;
 	color: blue;
 	font-weight: bolder;
+}
+.navbar-right{
+	margin-right: 0px;
 }
