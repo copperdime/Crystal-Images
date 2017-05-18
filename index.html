@@ -54,12 +54,13 @@
 			</div>
 		<!-- Third Column in row1 -->
 			<div class="purple col-md-4">
+
 				<div class = "text">Your Score: </div>
-					<p> Add some JQuery source here that calculates the score!</p>
+					<span id="overallScore"></span>
 				<div class= "text"> Wins: </div>
-					<p> Add some JQuery source that loops the wins!</p>
+					<span id="wins"></span>
 				<div class= "text">Losses: </div>
-					<p> Add some JQuery source that loops the losses! </p>
+					<span id="losses"></span>
 			</div>
 		</div>
 
@@ -109,13 +110,89 @@
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
   	<script type="text/javascript">
   			
+  			var wins = 0;
+  			var losses = 0;
+  			var total = 0;
   			var max = 12;
   			var min = 1;
-  			var imageNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+  			var randomNum1 = Math.floor(Math.random() * (max - min + 1)) + min;
+  			var randomNum2 = Math.floor(Math.random() * (max - min + 1)) + min;
+  			var randomNum3 = Math.floor(Math.random() * (max - min + 1)) + min;
+  			var randomNum4 = Math.floor(Math.random() * (max - min + 1)) + min;
   			var targetNumber = Math.floor(Math.random()*100);
 
- 			   	$(document).ready(function(){
-						$('#numberToGuess').text(targetNumber)});
+  			// var numOptions =[randomNum1, randomNum1, randomNum3, randomNum4];
+  			// var crystalOptions = ["#firstImage", "#secondImage", "#thirdImage", "#fourthImage"];
+
+  			// random number generator array of crystal array
+
+  			$(document).ready(function(){
+						$('#numberToGuess').text(targetNumber);
+						$('#overallScore').text(total);
+						$('#losses').text(losses);
+						$('#wins').text(wins)});
+
+  			var items = [
+  					[randomNum1, randomNum1, randomNum3, randomNum4],
+  					["#firstImage", "#secondImage", "#thirdImage", "#fourthImage"]
+  			];
+
+  			var crystal1 = [0][0];
+  			var crystal2 = [0][1];
+  			var crystal3 = [0][2];
+  			var crystal4 = [0][3];
+
+  			function assignment(){
+  				$('#firstImage').html($(crystal1));
+  				$('#secondImage').html($(crystal2));
+  				$('#thirdImage').html($(crystal3));
+  				$('#fourthImage').html($(crystal4));
+
+  					if ("#firstImage"){
+  						total += crystal1;
+  					}
+  					else if ('#secondImage'){
+  						total += crystal2;
+  					}
+  					else if ('#thirdImage'){
+  						total += crystal3;
+  					}
+  					else if ('#fourthImage'){
+  						total += crystal4;
+  					}	
+  			}
+  				
+  			function win(){
+  				if (total > targetNumber){
+  					losses += losses;
+  					console.log("You Lose!")
+  				}
+  				else if (total === targetNumber){
+  					wins += wins;
+  					console.log("You win!");
+
+  				}
+  			}
+
+  			// for (var i = 0; i < numOptions; i++){
+
+  			// 	var imageCrystal = $("#");
+  			// 	imageCrystal.addClass("crystal-image");
+  			// 	imageCrystal.attr("#firstImage", "#secondImage", "#thirdImage", "#fourthImage");
+  			// 	imageCrystal.attr("data-crystalvalue", numOptions[i]);
+
+  			// 	$(#cryst)
+
+  			// }
+
+ 			  //  	$(document).ready(function(){
+						// $('#numberToGuess').text(targetNumber);
+ 			  
+						// $('#overallScore').text(total);
+
+						// $('#losses').text(losses);
+ 			   	
+						// $('#wins').text(wins)});
 
 				// $(document).ready(function(){
 						// $('#firstImage').text(imageNumber);
@@ -123,22 +200,22 @@
 						// $('#thirdImage').text(imageNumber);
 						// $('#fourthImage').text(imageNumber)});
 
-				$(".crystalColor-image").on("click", function() {
+				// $(".crystalColor-image").on("click", function() {
 
-				    var crystalValue = ($(this).attr("data-crystalvalue"));
-				    crystalValue = parseInt(crystalValue);
-				    // We then add the crystalValue to the user's "counter" which is a global variable.
-				    // Every click, from every crystal adds to the global counter.
-				    counter += crystalValue;
-				    // All of the same game win-lose logic applies. So the rest remains unchanged.
-				    alert("New score: " + counter);
-				    if (counter === targetNumber) {
-				      alert("You win!");
-				    }
-				    else if (counter >= targetNumber) {
-				      alert("You lose!!");
-				    }
-				  });
+				//     var crystalValue = ($(this).attr("data-crystalvalue"));
+				//     crystalValue = parseInt(crystalValue);
+				//     // We then add the crystalValue to the user's "counter" which is a global variable.
+				//     // Every click, from every crystal adds to the global counter.
+				//     counter += crystalValue;
+				//     // All of the same game win-lose logic applies. So the rest remains unchanged.
+				//     alert("New score: " + counter);
+				//     if (counter === targetNumber) {
+				//       alert("You win!");
+				//     }
+				//     else if (counter >= targetNumber) {
+				//       alert("You lose!!");
+				//     }
+				  // });
 						 
 
 </script>
