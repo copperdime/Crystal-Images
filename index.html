@@ -12,7 +12,6 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<!-- External javascript file to store JQuery code -->
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-	<script src="assets/javascript/game.js" types="text/JavaScript"></script>
 
 
 <body>
@@ -50,55 +49,44 @@
 			<div class="text guess col-md-4">Number to Guess <p>
 				<hr> <!-- horizonal rule -->
 					<!-- <generates random number and posts output to the screen> -->
-					<span id="numberToGuess"></span>
+					<span id="numberToGuess"></span></p>
 			</div>
 		<!-- Third Column in row1 -->
 			<div class="purple col-md-4">
 
-				<div class = "text">Your Score: </div>
-					<span id="overallScore"></span>
-				<div class= "text"> Wins: </div>
-					<span id="wins"></span>
-				<div class= "text">Losses: </div>
-					<span id="losses"></span>
+				<div class = "text">Your Score: <p>
+					<span id="overallScore"></span></p>
+				</div>
+				<div class= "text"> Wins: <p>
+					<span id="wins"></span></p>
+				</div>
+				<div class= "text">Losses: <p>
+					<span id="losses"></span></p>
+				</div>
 			</div>
 		</div>
 
-		<!-- Blank second Row2 for spacing -- >
+		<!-- Blank second Row2 for spacing 
 		<div class="row">
 				<div class="black col-m-12">Hello</div>
-		</div>
+		</div> -- >
 
 		<!-- Third Row -->
 		<div class="row">
 		<!-- First Column in row3 -->
-			<div class="crystalColor col-md-3" id="firstImage">
-				<img src="assets/images/multicolorCrystal.jpg" width=240 height=240 alt="This is one of the unique crystals. Need 
-				to assign JQuery code to that assigns the crystal a number value. An on-click event">
-			</div>
-
+			<div class="crystalColor col-md-3" id="image-0"></div>
 		<!-- Second Column in row3 -->
-			<div class="crystalColor col-md-3" id="secondImage">
-				<img src="assets/images/pinkCrystal.jpg" width=240 height=240 alt="This is one of the unique crystals. Need 
-				to assign JQuery code to that assigns the crystal a number value. An on-click event">
-			</div>
-
+			<div class="crystalColor col-md-3" id="image-1"></div>
 		<!-- Third Column in row3 -->
-			<div class="crystalColor col-md-3" id="thirdImage">
-				<img src="assets/images/diamondCrystal.jpg" width=240 height=240 alt="This is one of the unique crystals. Need 
-				to assign JQuery code to that assigns the crystal a number value. An on-click event">
-			</div>
-
+			<div class="crystalColor col-md-3" id="image-2"></div>
 			<!-- Fourth Column in row3 -->
-			<div class="crystalColor col-md-3" id="fourthImage">
-				<img src="assets/images/bleedingCrystal.png" width=240 height=240 alt="This is one of the unique crystals. Need 
-				to assign JQuery code to that assigns the crystal a number value. An on-click event">
-			</div>
+			<div class="crystalColor col-md-3" id="image-3"></div>
 		</div>
+
 	<!--Begin Footer -->
 	<nav class="navbar navbar-default navbar-bottom">
   		<div class="container">
-   			<p class="navbar-text navbar-right">Copyright, <a href="index.html" class="navbar-link">Adrianne Kelly 2017 </a></p>
+   			<p class="navbar-text navbar-right"> &copy; <a href="index.html" class="navbar-link">Adrianne Kelly 2017 </a></p>
   		</div>
 	</nav>
 	</div>
@@ -107,118 +95,8 @@
 	<!-- Latest compiled and minified JavaScript -->
 	<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	 -->
-	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-  	<script type="text/javascript">
-  			
-  			var wins = 0;
-  			var losses = 0;
-  			var total = 0;
-  			var max = 12;
-  			var min = 1;
-  			var randomNum1 = Math.floor(Math.random() * (max - min + 1)) + min;
-  			var randomNum2 = Math.floor(Math.random() * (max - min + 1)) + min;
-  			var randomNum3 = Math.floor(Math.random() * (max - min + 1)) + min;
-  			var randomNum4 = Math.floor(Math.random() * (max - min + 1)) + min;
-  			var targetNumber = Math.floor(Math.random()*100);
 
-  			// var numOptions =[randomNum1, randomNum1, randomNum3, randomNum4];
-  			// var crystalOptions = ["#firstImage", "#secondImage", "#thirdImage", "#fourthImage"];
-
-  			// random number generator array of crystal array
-
-  			$(document).ready(function(){
-						$('#numberToGuess').text(targetNumber);
-						$('#overallScore').text(total);
-						$('#losses').text(losses);
-						$('#wins').text(wins)});
-
-  			var items = [
-  					[randomNum1, randomNum1, randomNum3, randomNum4],
-  					["#firstImage", "#secondImage", "#thirdImage", "#fourthImage"]
-  			];
-
-  			var crystal1 = [0][0];
-  			var crystal2 = [0][1];
-  			var crystal3 = [0][2];
-  			var crystal4 = [0][3];
-
-  			function assignment(){
-  				$('#firstImage').html($(crystal1));
-  				$('#secondImage').html($(crystal2));
-  				$('#thirdImage').html($(crystal3));
-  				$('#fourthImage').html($(crystal4));
-
-  					if ("#firstImage"){
-  						total += crystal1;
-  					}
-  					else if ('#secondImage'){
-  						total += crystal2;
-  					}
-  					else if ('#thirdImage'){
-  						total += crystal3;
-  					}
-  					else if ('#fourthImage'){
-  						total += crystal4;
-  					}	
-  			}
-  				
-  			function win(){
-  				if (total > targetNumber){
-  					losses += losses;
-  					console.log("You Lose!")
-  				}
-  				else if (total === targetNumber){
-  					wins += wins;
-  					console.log("You win!");
-
-  				}
-  			}
-
-  			// for (var i = 0; i < numOptions; i++){
-
-  			// 	var imageCrystal = $("#");
-  			// 	imageCrystal.addClass("crystal-image");
-  			// 	imageCrystal.attr("#firstImage", "#secondImage", "#thirdImage", "#fourthImage");
-  			// 	imageCrystal.attr("data-crystalvalue", numOptions[i]);
-
-  			// 	$(#cryst)
-
-  			// }
-
- 			  //  	$(document).ready(function(){
-						// $('#numberToGuess').text(targetNumber);
- 			  
-						// $('#overallScore').text(total);
-
-						// $('#losses').text(losses);
- 			   	
-						// $('#wins').text(wins)});
-
-				// $(document).ready(function(){
-						// $('#firstImage').text(imageNumber);
-						// $('#secondImage').text(imageNumber);
-						// $('#thirdImage').text(imageNumber);
-						// $('#fourthImage').text(imageNumber)});
-
-				// $(".crystalColor-image").on("click", function() {
-
-				//     var crystalValue = ($(this).attr("data-crystalvalue"));
-				//     crystalValue = parseInt(crystalValue);
-				//     // We then add the crystalValue to the user's "counter" which is a global variable.
-				//     // Every click, from every crystal adds to the global counter.
-				//     counter += crystalValue;
-				//     // All of the same game win-lose logic applies. So the rest remains unchanged.
-				//     alert("New score: " + counter);
-				//     if (counter === targetNumber) {
-				//       alert("You win!");
-				//     }
-				//     else if (counter >= targetNumber) {
-				//       alert("You lose!!");
-				//     }
-				  // });
-						 
-
-</script>
+  	<script src="assets/javascript/game.js" types="text/JavaScript"></script>
 </body>
 
 
